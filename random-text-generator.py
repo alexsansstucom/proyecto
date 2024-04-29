@@ -14,3 +14,4 @@ texto_random = generar_texto_random(diccionario, num_palabras)
 print(texto_random)
 
 #prueba gonzalo
+#el sans 
