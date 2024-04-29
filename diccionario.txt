@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 Hola el perez no hace nada
 y es verdad y gay y feo y gay
+=======
+No te preocupes por evitar repetir palabras mientras escribes, porque hacerlo solo hará el proceso se haga insoportablemente tedioso. Lo recomendable es sentarte a leer lo que has escrito y tomarte unos minutos en identificar aquellas repeticiones innecesarias.
+
+repeticiones innecesarias.Ahora bien ¿Qué hacer con los términos repetidos? Pues solamente debemos eliminarlos. Por ejemplo:
+
+Las frambuesas pueden prepararse de muchas formas. Mi madre suele usalas para preparar tartas, yogur, crepes, e inclusive hasta crema
+>>>>>>> ced401a28f1a141f3b75192b1cf4771df9eb4f41
