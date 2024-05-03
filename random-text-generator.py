@@ -11,4 +11,4 @@ diccionario = 'diccionario.txt'
 num_palabras = 100
 
 texto_random = generar_texto_random(diccionario, num_palabras)
-print(texto_random)
+print(texto_random) 
