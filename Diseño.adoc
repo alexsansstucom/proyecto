@@ -1,0 +1,85 @@
+= Tutor virtual para mejorar la velocidad
+
+== Descripción
+
+Un programa que funcione como un tutor virtual para mejorar la velocidad de escritura y la precisión en la escritura a máquina.
+Este programa proporcionará ejercicios de escritura, retroalimentación instantánea y seguimiento del progreso del usuario. Estará diseñado para ser interactivo y adaptativo, permitiendo a los usuarios mejorar sus habilidades de escritura a su propio ritmo.
+
+== Diseño propuesto
+
+Se propone un diseño que se divide en una serie de partes:
+
+- Creación y correción de los ejercicios.
+- Historial por usuario.
+- Interfaz (gráfica).
+
+Para ello, veremos cómo organizar cada una de las partes.
+
+=== Creación y corrección de los ejercicios.
+
+Una parte importante del proyecto es crear los ejercicios, adaptados al usuario y que estos se vayan corrigiendo en tiempo real.
+
+Para todo ello, se propone crear la siguiente clase y métodos:
+
+Clase Ejercicio::
+
+Atributos:::
+- ejercicio: El texto que el usuario deberá escribir.
+- conjunto_entrenamiento: Listado de letras/símbolos que quieren ser entrenados.
+- [opcional] pesos_entrenamiento: Un listado de pesos para cada letra/símbolo del conjunto_entrenamiento. Cuando mayor el peso, mayor probabilidad de que salga esa letra/símbolo en el ejercicio.
+- resultados: Lista conteniendo todas las pulsaciones que ha hecho el usuario durante el ejercicio. Cada pulsación es un diccionario que incluye: timestamp de la pulsación, tecla pulsada, tecla que debería haber sido pulada y si fue pulsación correcta.
+
+Constructor:::
+- Funcionalidad: Con la lista de letras/símbolos que quieren ser entrenados, se genera el texto que deberá ser escrito por el usuario. Se crea una lista vacía con los resultados de cada pulsación.
+- Entrada: Letras/símbolos que quieren ser entrenados (una lista).
+- Salida: Un nuevo ejercicio.
+
+Método pulsación::: 
+- Funcionalidad: El método compara la pulsación del usuario con la que debería haber ocurrido. En un diccionario guarda el timestamp en el que ha ocurrido, qué tecla debería haber sido pulsada, cuál se pulsó de verdad, si ha sido correcto y guarda el diccionario en la lista de resultados. Finalmente, devuelve el número indicando a la interfaz qué ha pasado, según las instrucciones anteriores.
+- Entrada: La última pulsación del usuario.
+- Salida: 1 si es una pulsación correcta, -1 en caso contrario, 0 si la pulsación ha sido correcta y el ejercicio ha acabado con ella.
+
+Método resultado:::
+- Funcionalidad: Informa si el ejercicio ha acabado y no. En caso de haberlo hecho, devuelve la información de cómo ha ido el ejercicio.
+- Entrada: Nada.
+- Salida: Si el ejercicio no ha acabado, devuelve None. Si el ejercicio ha acabado, devuelve una lista con todas las pulsaciones que el usuario ha hecho durante el ejercicio, incluyendo como cada elemento el diccionario que se ha ido creando el pulsación.
+
+
+=== Historial por usuario
+
+Clase Usuario::
+
+Atributos:::
+- historial_ejercicios: 
+- teclas_a_entrenar:
+- nombre:
+- estadísticas:
+
+Construtor:::
+
+Método guardar_resultado:::
+
+Método procesar_resultado:::
+
+Método letras_a_entrenar:::
+
+Método configurar_usuario:::
+das
+
+=== Interfaz
+
+Clase Interfaz::
+
+Atributos:::
+
+Constructor:::
+
+Método menú_principal:::
+
+Método menú_configuración:::
+
+Método ejercicio:::
+
+=== Aplicación
+
+Conjuntos de código que integran todo lo anterior en un solo fichero principal, encargándose de coordinar las llamadas entre los distintos módulos del programa.
