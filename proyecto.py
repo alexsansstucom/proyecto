@@ -1,9 +1,14 @@
+import random
 class Ejercicio:
     def __init__(self):
         self.resultados = []
 
-    def generar_ejercicio(self):
+    def generar_ejercicio(diccionario, num_palabras):
+        with open(diccionario,'r') as file:
+            palabras = file.read().split()
 
+        texto_random = ' '.join(random.choices(palabras, k=num_palabras))
+        return texto_random
     def pulsacion(self):
 
     def resultado(self):
