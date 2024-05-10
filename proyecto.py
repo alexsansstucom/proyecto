@@ -3,7 +3,7 @@ class Ejercicio:
     def __init__(self):
         self.resultados = []
 
-    def generar_ejercicio(diccionario, num_palabras):
+    def generar_ejercicio(self,diccionario, num_palabras):
         with open(diccionario,'r') as file:
             palabras = file.read().split()
 
