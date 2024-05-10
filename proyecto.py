@@ -1,3 +1,4 @@
+import random
 class Ejercicio:
     def __init__(self):
         self.resultados = []
