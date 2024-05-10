@@ -10,9 +10,9 @@ class Ejercicio:
         texto_random = ' '.join(random.choices(palabras, k=num_palabras))
         return texto_random
     def pulsacion(self):
-
+        pass
     def resultado(self):
-
+        pass
 #Historial de usuario
 class Usuario:
     def __init__(self, nombre):
